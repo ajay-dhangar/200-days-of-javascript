@@ -1,0 +1,12 @@
+contact_links:
+  - name: 💬 Community Support
+    url: https://github.com/ajay-dhangar/200-days-of-javascript/discussions
+    about: If you have questions, ideas, or want to share something, start a discussion here.
+
+  - name: 📚 Documentation
+    url: https://github.com/ajay-dhangar/200-days-of-javascript
+    about: Refer to the README for the full JavaScript learning roadmap and contribution guidelines.
+
+  - name: 🛠 Report a Bug
+    url: https://github.com/ajay-dhangar/200-days-of-javascript/issues/new?template=bug_report.md
+    about: Found a bug? Please file an issue with all the necessary details.
