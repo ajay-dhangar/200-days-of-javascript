@@ -1,0 +1,14 @@
+name: 🙋 Auto Assign
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  add-reviewer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign Reviewer
+        uses: kentaro-m/auto-assign-action@v1.2.4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
