@@ -56,7 +56,7 @@ Try this:
 
 ```js
 console.log("Welcome to Day 1 of JavaScript!");
-````
+```
 
 ---
 
