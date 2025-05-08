@@ -24,13 +24,13 @@ Welcome to the **JavaScript Learning Journey** – a comprehensive, 200-day chal
 
 ## 🔍 Why This Repo?
 
-- ✅ Structured 200-day learning plan
-- 💡 Covers **all levels**: beginner to expert
-- 🧪 Includes DSA + real-world projects
-- 🛠️ Modern tools, testing, TypeScript, React
-- 🧰 Ideal for interview prep & job readiness
-- 📈 SEO-optimized content with meta tags
-- 🤝 Open to contributors with contribution guide
+* ✅ Structured 200-day learning plan
+* 💡 Covers **all levels**: beginner to expert
+* 🧪 Includes DSA + real-world projects
+* 🛠️ Modern tools, testing, TypeScript, React
+* 🧰 Ideal for interview prep & job readiness
+* 📈 SEO-optimized content with meta tags
+* 🤝 Open to contributors with contribution guide
 
 ---
 
@@ -91,34 +91,34 @@ Welcome to the **JavaScript Learning Journey** – a comprehensive, 200-day chal
 
 ## 📚 Resources
 
-- [JavaScript.info](https://javascript.info/)
-- [Eloquent JavaScript](https://eloquentjavascript.net/)
-- [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [Frontend Mentor](https://frontendmentor.io/)
-- [LeetCode](https://leetcode.com)
+* [JavaScript.info](https://javascript.info/)
+* [Eloquent JavaScript](https://eloquentjavascript.net/)
+* [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [Frontend Mentor](https://frontendmentor.io/)
+* [LeetCode](https://leetcode.com)
 
 ---
 
 ## 📦 Tools & Technologies
 
-- JavaScript (ES6+)
-- Node.js
-- Web APIs
-- Git & GitHub
-- ESLint & Prettier
-- React.js
-- Babel, Webpack
-- Jest / Vitest
-- Chrome DevTools
+* JavaScript (ES6+)
+* Node.js
+* Web APIs
+* Git & GitHub
+* ESLint & Prettier
+* React.js
+* Babel, Webpack
+* Jest / Vitest
+* Chrome DevTools
 
 ---
 
 ## 🎯 Goals
 
-- Build 20+ mini projects
-- Master DSA using JS
-- Become job-ready for JavaScript SDE roles
-- Contribute to open source & build a dev portfolio
+* Build 20+ mini projects
+* Master DSA using JS
+* Become job-ready for JavaScript SDE roles
+* Contribute to open source & build a dev portfolio
 
 ---
 
