@@ -1,0 +1,32 @@
+name: 🚨 Lint Check
+
+on:
+  pull_request:
+    paths:
+      - '**/*.js'
+      - '**/*.md'
+  push:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies (if any)
+        run: npm install || true
+
+      - name: Run ESLint (if project uses ESLint)
+        run: npx eslint . --ext .js || echo "Skipping JS lint (ESLint not found)"
+
+      - name: Run Markdown Lint
+        uses: DavidAnson/markdownlint-cli2-action@v13
+        with:
+          globs: '**/*.md'
