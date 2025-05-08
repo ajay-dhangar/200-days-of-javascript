@@ -1,0 +1,59 @@
+name: 🔃 Pull Request
+description: Submit your code contribution for review
+title: "[PR] - "
+labels: [pull-request]
+assignees:
+  - ajay-dhangar
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your contribution! Please fill out the details below to help us review your PR.
+
+  - type: input
+    id: related_issue
+    attributes:
+      label: Related Issue
+      description: Link the issue this PR resolves or relates to
+      placeholder: "#12"
+    validations:
+      required: false
+
+  - type: textarea
+    id: changes
+    attributes:
+      label: Summary of Changes
+      description: What changes have you made?
+      placeholder: |
+        - Fixed a bug with variable naming
+        - Added new data types example
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type of Change
+      options:
+        - 🐛 Bug fix
+        - ✨ New feature
+        - 📝 Documentation
+        - ♻️ Code refactor
+        - 🚀 Performance improvement
+        - ✅ Test case
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist Before Merge
+      options:
+        - label: I have tested the changes locally
+          required: true
+        - label: I have updated the docs (if applicable)
+          required: false
+        - label: I have linked the related issue (if applicable)
+          required: false
+        - label: I followed the project's coding conventions
+          required: true
