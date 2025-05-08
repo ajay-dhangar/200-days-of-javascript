@@ -1,0 +1,63 @@
+name: 🐞 Bug Report
+description: Report a bug to help us improve
+title: "[BUG] - "
+labels: [bug]
+assignees:
+  - ajay-dhangar
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill out this form with as much detail as possible.
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: In which environment did the bug occur? (e.g., OS, browser, Node.js version)
+      placeholder: "e.g., Windows 11 / Chrome 124 / Node 20.x"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the Bug
+      description: A clear and concise description of what the bug is.
+      placeholder: "Explain what happened and what you expected."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce the bug?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console Logs or Screenshots
+      description: Paste error messages or attach screenshots.
+      placeholder: "Attach logs or screenshots here."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Bug Severity
+      description: How critical is this bug?
+      options:
+        - High 🔥 (blocks usage)
+        - Medium ⚠️ (inconsistent behavior)
+        - Low 🐜 (minor glitch)
+    validations:
+      required: true
