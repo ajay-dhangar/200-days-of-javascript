@@ -1,0 +1,9 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^http://localhost"
+    }
+  ],
+  "checkExternal": true,
+  "checkInternal": true
+}
