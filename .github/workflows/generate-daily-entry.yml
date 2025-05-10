@@ -1,0 +1,48 @@
+name: Generate Daily JS File
+
+on:
+  workflow_dispatch:
+    inputs:
+      day_number:
+        description: 'Enter Day Number (e.g., 03)'
+        required: true
+      title:
+        description: 'Title of the Day (e.g., Variables and Data Types)'
+        required: true
+
+jobs:
+  generate-file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Generate Markdown File
+        run: |
+          DAY_NUMBER=${{ github.event.inputs.day_number }}
+          TITLE="${{ github.event.inputs.title }}"
+          FILE_PATH="./daily/day${DAY_NUMBER}.md"
+          
+          # Format title for markdown metadata
+          TITLE_MD=$(echo "$TITLE" | sed 's/"/\\"/g')
+
+          # Copy template and replace placeholders
+          cp template.md "$FILE_PATH"
+
+          sed -i "s/Day XX/Day ${DAY_NUMBER}/g" "$FILE_PATH"
+          sed -i "s/Title of the Concept/${TITLE}/g" "$FILE_PATH"
+          sed -i "s/XX/${DAY_NUMBER}/g" "$FILE_PATH"
+
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add daily/day${{ github.event.inputs.day_number }}.md
+          git commit -m "chore: generate Day ${{ github.event.inputs.day_number }} - ${{ github.event.inputs.title }}"
+          git push
