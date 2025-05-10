@@ -1,0 +1,37 @@
+name: Generate Project Entry
+
+on:
+  workflow_dispatch:
+    inputs:
+      project_slug:
+        description: 'Enter project slug (e.g., todo-app)'
+        required: true
+      project_title:
+        description: 'Project title (e.g., Todo App)'
+        required: true
+
+jobs:
+  generate-project:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Generate Project Markdown
+        run: |
+          SLUG=${{ github.event.inputs.project_slug }}
+          TITLE="${{ github.event.inputs.project_title }}"
+          FILE_PATH="./projects/${SLUG}.md"
+
+          # Copy template and customize
+          cp project-template.md "$FILE_PATH"
+          sed -i "s/\[PROJECT_TITLE\]/${TITLE}/g" "$FILE_PATH"
+
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add projects/${{ github.event.inputs.project_slug }}.md
+          git commit -m "chore: add project - ${{ github.event.inputs.project_title }}"
+          git push
